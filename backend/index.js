@@ -13,9 +13,10 @@ const port=process.env.PORT || 5000
 
 
 app.use(cors({
-  origin:"https://realtimechatapp-4vak.onrender.com",
-  credentials: true
-}));
+  origin: [
+    "http://localhost:5173",
+    "https://realtimechatapp-4vak.onrender.com"
+  ],
 
 app.use(express.json())
 app.use(cookieParser())
